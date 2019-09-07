@@ -8,19 +8,18 @@
 
 #include <stdio.h>
 
+#define MAX 40
+#define LOW -40
+#define STEP 2
+
 int main() {
     float c, f;
-    int lower, max, step;
     
-    lower = -40;
-    max = 40;
-    step = 2;
-    
-    c = lower;
-    while (c < max) {
+    c = LOW;
+    while (c < MAX) {
         f = (c * (9.0 / 5.0)) + 32.0;
         printf("%3.0f    %3.2f\n", c, f);
-        c += step;
+        c += STEP;
     }
     
     return 0;
