@@ -1,8 +1,8 @@
 //
 //  main.c
-//  intro
+//  e1x3
 //
-//  Created by Павел Хомич on 06/09/2019.
+//  Created by Павел Хомич on 07/09/2019.
 //  Copyright © 2019 Павел Хомич. All rights reserved.
 //
 
