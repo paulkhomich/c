@@ -14,7 +14,6 @@ int main(int argc, const char * argv[]) {
     char s[] = "hello";
     char t[] = "paul";
     
-    
     printf("%s\t%s\n", s, t);
     
     return 0;
