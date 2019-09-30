@@ -7,16 +7,15 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
-extern int MAXSIZE;
-extern int go(void);
-
-char c[] = "abc";
 
 int main(int argc, const char * argv[]) {
-    for (int i = 0; c[i] != '\0'; i++) {
-        printf("%c\n", c[i]);
-    }
+    char s[] = "hello";
+    char t[] = "paul";
+    
+    
+    printf("%s\t%s\n", s, t);
     
     return 0;
 }
