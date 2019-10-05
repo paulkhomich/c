@@ -1,5 +1,4 @@
 *.xcodeproj
-
-**/.DS_Store
+c**/.DS_Store
 *.DS_Store
 .DS_Store

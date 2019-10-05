@@ -11,10 +11,14 @@
 
 
 int main(int argc, const char * argv[]) {
-    char s[] = "hello";
-    char t[] = "paul";
+    int s[] = {1,2,3};
+    int x = 5;
     
-    printf("%s\t%s\n", s, t);
+    int *p = &x;
+    p = s;
+    printf("%d\t%d\n", *p, *(p+1));
+
+    
     
     return 0;
 }
