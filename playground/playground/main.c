@@ -9,16 +9,27 @@
 #include <stdio.h>
 #include <string.h>
 
+int sum(int, int, void (*)(void));
+void hi(void);
+void bye(void);
 
 int main(int argc, const char * argv[]) {
-    int s[] = {1,2,3};
-    int x = 5;
-    
-    int *p = &x;
-    p = s;
-    printf("%d\t%d\n", *p, *(p+1));
-
-    
+    sum(1,4, hi);
+    sum(2,8, bye);
     
     return 0;
+}
+
+int sum(int a, int b, void(*callback)(void)) {
+    callback();
+
+    return a + b;
+}
+
+void hi(void) {
+    printf("hi\n");
+}
+
+void bye(void) {
+    printf("bye\n");
 }
