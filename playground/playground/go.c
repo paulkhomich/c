@@ -8,8 +8,8 @@
 
 #include <stdio.h>
 
-int MAXSIZE = 5;
+static int MAXSIZE = 808;
 
 int go(void) {
-    return 777;
+    return MAXSIZE;
 }

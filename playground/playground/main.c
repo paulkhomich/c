@@ -1,35 +1,27 @@
-//
-//  main.c
-//  playground
-//
-//  Created by Павел Хомич on 22/09/2019.
-//  Copyright © 2019 Павел Хомич. All rights reserved.
-//
-
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+#include <stdalign.h>
+#include <complex.h>
 
-int sum(int, int, void (*)(void));
-void hi(void);
-void bye(void);
+struct newworld {
+    char c;
+    int a;
+    short b;
+};
 
-int main(int argc, const char * argv[]) {
-    sum(1,4, hi);
-    sum(2,8, bye);
+int main(void) {
+    alignas(sizeof(float[4])) float vec[4] = {
+        [1] = 3.3,
+        [3] = 2.2,
+    };
+    
+    int arr[5];
+    printf("%p\n", arr);
+    printf("%p\n", arr+1);
+    printf("%p\n", &arr);
+    printf("%p\n", &arr+1);
+    
+    printf("%lu\t%lu\n", sizeof(struct newworld), _Alignof(struct newworld));
     
     return 0;
-}
-
-int sum(int a, int b, void(*callback)(void)) {
-    callback();
-
-    return a + b;
-}
-
-void hi(void) {
-    printf("hi\n");
-}
-
-void bye(void) {
-    printf("bye\n");
 }
